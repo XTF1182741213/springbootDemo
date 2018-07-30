@@ -19,13 +19,14 @@ public class StudentControllerTest {
     @Autowired
     private MockMvc mvc;
     /**
-     * @Date:16:09 2018/7/30
+     * @Date:16:18 2018/7/30
      * @Description:
      * @Param:  * @param
      * @Return:
      */
     @Test
     public void getStudentList() throws Exception {
+
 
         mvc.perform(MockMvcRequestBuilders.get("/hello"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
