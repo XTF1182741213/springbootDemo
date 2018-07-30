@@ -18,9 +18,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 public class StudentControllerTest {
     @Autowired
     private MockMvc mvc;
-
+    /**
+     * @Date:16:09 2018/7/30
+     * @Description:
+     * @Param:  * @param
+     * @Return:
+     */
     @Test
     public void getStudentList() throws Exception {
+
         mvc.perform(MockMvcRequestBuilders.get("/hello"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(print());
