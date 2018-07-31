@@ -69,7 +69,8 @@ public class DemoController {
     /**
      * @Date:17:03 2018/7/30
      * @Description:Put
-     * @Param:  * @param student
+     * @Param:
+     * * @param student
      * @Return:
      */
     @PutMapping(value="/testput",consumes="application/json;charset=utf-8")
