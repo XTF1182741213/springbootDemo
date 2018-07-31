@@ -85,8 +85,8 @@ public class DemoController {
      * @Return:
      */
     @DeleteMapping(value="/testdelete")
-    public String deleteStudent(@RequestParam(value="name") String name){
-        Student student2=new Student(20,name);
+    public String deleteStudent(@RequestParam(value="age") int age,@RequestParam(value="name") String name){
+        Student student2=new Student(age,name);
         return student2.toString();
     }
 

@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.Student;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,10 +26,6 @@ public class DemoControllerTest {
 
     @Test
     public void getStudent() throws Exception {
-//        mvc.perform(MockMvcRequestBuilders.get("/testGet").param(21,"fly"))
-//                .andExpect(MockMvcResultMatchers.status().isOk())
-//                .andDo(print())
-//                .andReturn().getResponse().getContentAsString();   //将相应的数据转换为字符串
 
         String responseString = mvc.perform(
                 MockMvcRequestBuilders.get("/testget/21/fly")    //请求的url,请求的方法是get
@@ -68,11 +65,17 @@ public class DemoControllerTest {
 
     @Test
     public void deleteStudent() throws Exception {
-/*        mvc.perform(MockMvcRequestBuilders
-                .delete("/testdelete")
-                .param("fsd"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(print());*/
+
+        ObjectMapper mapper=new ObjectMapper();
+        mvc.perform(MockMvcRequestBuilders
+                    .delete("/testdelete")
+                    .contentType(MediaType.APPLICATION_JSON_UTF8)
+                     .param("age","21")
+                      .param("name","fly"))
+                     .andExpect(MockMvcResultMatchers.status().isOk())
+                     .andDo(print());
+
+
 
     }
 }
