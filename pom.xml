@@ -80,13 +80,30 @@
         </dependency>
     </dependencies>
 
+   <scm>
+       <url>https://github.com/XTF1182741213/springbootDemo</url>
+       <connection>scm.git:https://github.com/XTF1182741213/springbootDemo.git</connection>
+       <developerConnection>scm:git:https://github.com/XTF1182741213/springbootDemo.git</developerConnection>
+       <tag>IEAD</tag>
+   </scm>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!-- 插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.9.5</version>
+                <configuration>
+                    <connectionType>developerConnection</connectionType>
+                </configuration>
+            </plugin>
         </plugins>
+
     </build>
 
 
