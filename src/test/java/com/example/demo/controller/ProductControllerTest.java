@@ -23,9 +23,14 @@ public class ProductControllerTest {
     @Autowired
     private MockMvc mvc;
 
+    /**
+     * @Date:16:47 2018/7/31
+     * @Description:
+     * @Param:  * @param
+     * @Return:
+     */
     @Test
     public void getProduct() throws Exception {
-
         String responseString = mvc.perform(
                 MockMvcRequestBuilders.get("/getproduct")    //请求的url,请求的方法是get
                         .contentType(MediaType.APPLICATION_JSON)  //数据的格式
@@ -35,6 +40,12 @@ public class ProductControllerTest {
         //.andExpect(MockMvcResultMatchers.content().string("365"));  //测试接口返回内容
     }
 
+    /**
+     * @Date:16:47 2018/7/31
+     * @Description:
+     * @Param:  * @param
+     * @Return:
+     */
     @Test
     public void getProductJson() throws Exception{
         String responseJson=mvc.perform(
