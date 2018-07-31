@@ -25,10 +25,10 @@ public class StudentControllerTest {
      * @Return:
      */
     @Test
-    public void getStudentList() throws Exception {
+    public void getProductList() throws Exception {
 
 
-        mvc.perform(MockMvcRequestBuilders.get("/hello"))
+        mvc.perform(MockMvcRequestBuilders.get("/getproduct"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(print());
         //.andExpect(MockMvcResultMatchers.content().string("365"));  //测试接口返回内容
