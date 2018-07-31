@@ -93,13 +93,25 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- 插件 -->
+            <!-- 插件提交代码到github -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-scm-plugin</artifactId>
                 <version>1.9.5</version>
                 <configuration>
                     <connectionType>developerConnection</connectionType>
+                </configuration>
+            </plugin>
+            <!-- 打包提交到github-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <username>XTF1182741213</username>
+                    <password>abc120119</password>
+                    <tagBase>${project.artifactId}-${project.version}</tagBase>
+                    <goals>f.pom.xml deploy</goals>
                 </configuration>
             </plugin>
         </plugins>
