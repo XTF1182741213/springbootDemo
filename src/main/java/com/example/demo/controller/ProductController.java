@@ -23,7 +23,7 @@ public class ProductController {
      * @Param:  * @param
      * @Return:
      */
-    @RequestMapping(value="/getmvnproduct",method=RequestMethod.GET)
+    @RequestMapping(value="/getproduct",method=RequestMethod.GET)
     public List<Product> getProduct(){
         Foods foods=new Foods("123456","皮蛋粥",1.2,"好吃的皮蛋粥","http://xxx.com");
         Product product=new Product("热榜",1,foods);
