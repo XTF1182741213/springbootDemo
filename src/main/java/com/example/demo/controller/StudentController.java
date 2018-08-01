@@ -11,7 +11,7 @@ import java.util.List;
  * @Date:11:38 2018/7/30
  */
 @RestController
-public class DemoController {
+public class StudentController {
     /**
      * @Date:11:38 2018/7/30
      * @Description:
