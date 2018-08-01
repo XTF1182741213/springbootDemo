@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Student;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,12 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-
+/**
+ * @Author:fly
+ * @Description: test ProductController class
+ * @Date:17:05 2018/8/1
+ */
+@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -37,6 +43,7 @@ public class ProductControllerTest {
         ).andExpect(MockMvcResultMatchers.status().isOk())    //返回的状态是200
                 .andDo(print())         //打印出请求和相应的内容
                 .andReturn().getResponse().getContentAsString();   //将相应的数据转换为字符串
+        log.info("use /getproduct Api interface");
         //.andExpect(MockMvcResultMatchers.content().string("365"));  //测试接口返回内容
     }
 
@@ -54,6 +61,7 @@ public class ProductControllerTest {
         ).andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(print())
                 .andReturn().getResponse().getContentAsString();
+        log.info("use /getproductjson Api interface");
 
     }
 

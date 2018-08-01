@@ -1,7 +1,11 @@
 package com.example.demo.entity;
 
 import java.util.List;
-
+/**
+ * @Author:fly
+ * @Description: the JSONDate ,it will return ,to Api interface
+ * @Date:17:02 2018/8/1
+ */
 public class JsonData {
     private int code;
     private String msg;

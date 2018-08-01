@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @Author:fly
- * @Description:
+ * @Description: to start class
  * @Date:15:55 2018/7/30
  */
 @SpringBootApplication

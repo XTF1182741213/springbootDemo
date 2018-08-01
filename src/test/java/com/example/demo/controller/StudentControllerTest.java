@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Student;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +17,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-
+@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -34,6 +35,7 @@ public class StudentControllerTest {
                 .andDo(print())         //打印出请求和相应的内容
                 .andReturn().getResponse().getContentAsString();   //将相应的数据转换为字符串
         //.andExpect(MockMvcResultMatchers.content().string("365"));  //测试接口返回内容
+        log.info("test /testget Api interface");
     }
 
     @Test
@@ -47,7 +49,7 @@ public class StudentControllerTest {
                 )
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(print());
-
+        log.info("test /testpost Api interface");
     }
 
     @Test
@@ -60,7 +62,7 @@ public class StudentControllerTest {
         .content(studentJson))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(print());
-
+        log.info("test /testput Api interface");
     }
 
     @Test
@@ -74,7 +76,7 @@ public class StudentControllerTest {
                       .param("name","fly"))
                      .andExpect(MockMvcResultMatchers.status().isOk())
                      .andDo(print());
-
+        log.info("test /testdelete Api interface");
 
 
     }

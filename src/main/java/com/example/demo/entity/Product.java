@@ -1,5 +1,9 @@
 package com.example.demo.entity;
-
+/**
+ * @Author:fly
+ * @Description: product to include Foods
+ * @Date:17:04 2018/8/1
+ */
 public class Product {
     private String name;
     private int type;

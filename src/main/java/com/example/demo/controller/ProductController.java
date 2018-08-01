@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @Author:fly
- * @Description:
+ * @Description:ProductController
  * @Date:11:38 2018/7/30
  */
 @Slf4j
@@ -20,7 +20,7 @@ public class ProductController {
 
     /**
      * @Date:16:24 2018/7/31
-     * @Description:
+     * @Description: return product json data,without header file
      * @Param:  * @param
      * @Return:
      */
@@ -28,10 +28,6 @@ public class ProductController {
     public List<Product> getProduct(){
         Foods foods=new Foods("123456","皮蛋粥",1.2,"好吃的皮蛋粥","http://xxx.com");
         Product product=new Product("热榜",1,foods);
-        log.info("info.....");
-        log.warn("warn.....");
-        log.debug("debug....");
-        log.error("error....");
         List<Product> productList=new ArrayList<>();
         productList.add(product);
         return productList;
@@ -40,7 +36,7 @@ public class ProductController {
 
     /**
      * @Date:16:46 2018/7/31
-     * @Description:
+     * @Description: return json data including header file,test logger
      * @Param:  * @param
      * @Return:
      */
@@ -50,10 +46,6 @@ public class ProductController {
         Product product=new Product("热榜",1,foods);
         List<Product> productList=new ArrayList<>();
         productList.add(product);
-        log.info("info.....");
-        log.warn("warn.....");
-        log.debug("debug....");
-        log.error("error....");
         JsonData jsonData=new JsonData(0,"成功",productList);
         return jsonData;
     }

@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 /**
  * @Author:fly
- * @Description:
+ * @Description: Student Class
  * @Date:11:37 2018/7/30
  */
 public class Student {
